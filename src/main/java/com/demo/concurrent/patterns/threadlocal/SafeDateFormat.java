@@ -8,11 +8,11 @@ import java.text.SimpleDateFormat;
  */
 public class SafeDateFormat {
 
-    private static final ThreadLocal<DateFormat> tl = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+    private static final ThreadLocal<DateFormat> tl =
+            ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
 
     public static DateFormat get() {
         return tl.get();
     }
-
 
 }
